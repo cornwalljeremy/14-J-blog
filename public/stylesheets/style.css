@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 15vh;
+    background-color: rgb(33, 33, 70);
+    font-family: "Bungee Hairline", cursive;
+  }
+  .logo {
+    color: whitesmoke;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 30px;
+  }
+  .nav-links {
+    display: flex;
+    /* background-color: black; */
+    justify-content: space-around;
+    width: 40%;
+    list-style: none;
+  }
+  .nav-links a {
+    color: whitesmoke;
+    text-decoration: none;
+    letter-spacing: 3px;
+    /* font-weight: bold; */
+    font-size: 20px;
+  }
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  .burger div {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: whitesmoke;
+    transition: all 0.3 ease;
+  }
