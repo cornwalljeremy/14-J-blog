@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J-Blog</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J-Blog</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap"
+      rel="stylesheet"
+    />
 </head>
+
 <body>
- <nav>
+  <header>
+    <nav>
       <div class="logo">
-        <h4>Jeremy Cornwall's Blog</h4>
+        <h4>
+          <a href="/"> Jeremy Cornwall's Blog</a>
+        </h4>
       </div>
+      {{#if loggedIn}}
       <ul class="nav-links">
         <li>
-          <a href="#">Home</a>
+          <a href="/dashboard">Home</a>
         </li>
         <li>
           <a href="#">Blog Posts</a>
@@ -22,7 +32,11 @@
           <a href="#">Blog Comments</a>
         </li>
         <li>
-          <a href="#">Login/Logout</a>
+          <button id="logout" class="btn-no-style">logout</button>
+        </li>
+        {{else}}
+        <li>
+          <a href="login">Login</a>
         </li>
       </ul>
       <div class="burger">
@@ -30,7 +44,14 @@
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-    </nav>  
-    
+      {{/if}}
+    </nav>
+  </header>
+{{{ body }}}
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+
 </body>
+
 </html>

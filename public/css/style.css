@@ -10,6 +10,11 @@
     min-height: 15vh;
     background-color: rgb(33, 33, 70);
     font-family: "Bungee Hairline", cursive;
+    list-style: none;
+  }
+  nav a {
+    color: whitesmoke !important;
+    
   }
   .logo {
     color: whitesmoke;
@@ -41,4 +46,60 @@
     margin: 5px;
     background-color: whitesmoke;
     transition: all 0.3 ease;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .nav-links {
+      width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    body{
+      overflow-x: hidden;
+    }
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 92vh;
+      top: 8vh;
+      background-color: rgb(33, 33, 70);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      transform: translate(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+      opacity: 0;
+    }
+    .burger{
+      display: block;
+    }
+  }
+  
+  .nav-active{
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .toggle .line1{
+    transform: rotate(-70deg) translate(-5px,6px);
+  }
+  .toggle .line2{
+  opacity: 0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
   }
