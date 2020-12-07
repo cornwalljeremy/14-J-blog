@@ -1,4 +1,4 @@
-<article class="post">
+{{!-- <article class="post">
     <div class="title">
 
         <h3>{{title}}</h3>
@@ -8,5 +8,25 @@
         {{user.username}} on {{format_date created_at}}
         |
         <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+</article> --}}
+
+
+<article class="post">
+    <div class="title">
+        <div class="card border border-success rounded-0" style="width: 50rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+
+                <p class="card-text">{{blog_content}}</p>
+                <div class="meta">
+                    {{user.username}} on {{format_date created_at}}
+                    |
+                    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                </div>
+                {{!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> --}}
+            </div>
+        </div>
     </div>
 </article>
