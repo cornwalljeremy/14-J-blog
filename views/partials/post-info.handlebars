@@ -23,6 +23,7 @@
                     {{user.username}} on {{format_date created_at}}
                     |
                     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+                    <a href="/dashboard/edit/{{post.id}}" class="edit-link">  Edit post</a>
                 </div>
                 {{!-- <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a> --}}

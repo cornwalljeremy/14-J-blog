@@ -1,19 +1,29 @@
 <section>
-  <h2>Create New Post</h2>
+  <div class="container d-flex">
+    <div class="col-2"></div>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+    <div class="create-new-blog col-10">
+      <h2>Create New Post</h2>
+
+      <form class="new-post-form">
+
+        <div class="post-title">
+          <h3>Title</h3>
+          <input class="form-control col-8 rounded-0" id="post-title" type="text" name="post-title">
+          {{!-- <input type="text" id="post-title" name="post-title" /> --}}
+        </div>
+        <div class="form-group">
+          <h3>Blog</h3>
+          {{!-- <label for="textarea">Blog</label> --}}
+          <textarea class="blog_content col-8" id="blog_content" rows="6" name="blog_content"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success rounded-0" id="post-title">Create</button>
+
+      </form>
     </div>
-    <div>
-      <label for="textarea">Blog</label>
-      <input id="blog_content" name="blog_content" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
+  </div>
 </section>
-{{#if posts.length}}
+{{!-- {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -25,5 +35,31 @@
     {{/each}}
   </ol>
 </section>
-{{/if}}
+{{/if}} --}}
 <script src="/javascript/add-post.js"></script>
+
+
+
+{{#if posts.length}}
+<article class="post">
+  <h2>Your Posts</h2>
+  <div class="title">
+    <div>
+      <div class="card-body">
+        <h5 class="card-title">{{title}}</h5>
+
+        <ol>
+          {{#each posts as |post|}}
+          <li>
+            {{> post-info post}}
+            {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            <button type="submit" href="/dashboard/edit/{{post.id}}" class="btn btn-success rounded-0 edit-link">Edit</button> --}}
+          </li>
+          {{/each}}
+        </ol>
+
+      </div>
+    </div>
+  </div>
+</article>
+{{/if}}
