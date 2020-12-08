@@ -9,7 +9,7 @@ nav {
   align-items: center;
   min-height: 15vh;
   background-color: rgb(33, 33, 70);
-  font-family: "Bungee Hairline", cursive;
+  /* font-family: "Bungee Hairline", cursive; */
   list-style: none;
 }
 nav a {
@@ -76,6 +76,9 @@ nav a {
 .main-content {
   /* margin: 60px; */
   list-style: none;
+  
+}
+body {
   background-color: rgb(184, 117, 65);
 }
 .nav-links li {
@@ -138,6 +141,7 @@ nav a {
 
 .nav-active {
   transform: translateX(0%);
+  z-index: 9999;
 }
 
 @keyframes navLinkFade {

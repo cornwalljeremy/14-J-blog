@@ -29,7 +29,7 @@
 
 {{#if posts.length}}
 <article class="post d-flex">
-  <div class="col"></div>
+  <div class="col-2"></div>
     {{!-- <h5>Your Posts</h5> --}}
     <div class="title">
       <div>
@@ -37,7 +37,7 @@
           <h5 class="card-title">{{title}}</h5>
 
           <ol class="list-number">
-            {{#each posts as |post|}}
+            {{#each posts as | post|}}
             <li>
               {{> post-info post}}
 
