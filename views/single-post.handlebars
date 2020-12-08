@@ -1,16 +1,18 @@
 {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
+<article class="comments">
+    <div class="col"></div>
+    <div class="comment-form">
+        <div class="form-group">
+            <h4>Comment Section</h4>
+            <textarea class="blog_content col-8" id="blog_content" rows="6" name="comment-body"></textarea>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success rounded-0">Add Comment</button>
+        </div>
     </div>
-
-    <div>
-        
-        <button type="submit" class="btn btn-success">Add Comment</button>
-
-    </div>
-</form>
+</article>
 {{/if}}
+
 
 {{> comments post.comments}}
 
@@ -18,4 +20,3 @@
 <script src="/javascript/comment.js"></script>
 
 {{/if}}
-

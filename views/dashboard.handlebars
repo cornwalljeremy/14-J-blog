@@ -15,7 +15,7 @@
         <div class="form-group">
           <h3>Blog</h3>
           {{!-- <label for="textarea">Blog</label> --}}
-          <textarea class="blog_content col-8" id="blog_content" rows="6" name="blog_content"></textarea>
+          <textarea class="blog_content col-12" id="blog_content" rows="6" name="blog_content"></textarea>
         </div>
         <button type="submit" class="btn btn-success rounded-0" id="post-title">Create</button>
 
@@ -23,41 +23,29 @@
     </div>
   </div>
 </section>
-{{!-- {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
-    {{#each posts as |post|}}
-    <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
-    {{/each}}
-  </ol>
-</section>
-{{/if}} --}}
 <script src="/javascript/add-post.js"></script>
 
 
 
 {{#if posts.length}}
-<article class="post">
-  <h2>Your Posts</h2>
-  <div class="title">
-    <div>
-      <div class="card-body">
-        <h5 class="card-title">{{title}}</h5>
+<article class="post d-flex">
+  <div class="col"></div>
+    {{!-- <h5>Your Posts</h5> --}}
+    <div class="title">
+      <div>
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
 
-        <ol>
-          {{#each posts as |post|}}
-          <li>
-            {{> post-info post}}
-            {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-            <button type="submit" href="/dashboard/edit/{{post.id}}" class="btn btn-success rounded-0 edit-link">Edit</button> --}}
-          </li>
-          {{/each}}
-        </ol>
+          <ol class="list-number">
+            {{#each posts as |post|}}
+            <li>
+              {{> post-info post}}
 
+            </li>
+            {{/each}}
+          </ol>
+
+        </div>
       </div>
     </div>
   </div>

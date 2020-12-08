@@ -57,8 +57,21 @@ nav a {
 .post-title {
   padding: 20px;
 }
-
-
+.list-number {
+  list-style: none;
+}
+.comment-form {
+  padding: 40px;
+}
+.comment {
+  background-color: antiquewhite;
+  padding: 20px 20px;
+}
+.meta {
+  text-decoration: underline;
+  font-size: larger;
+  font-weight: bold;
+}
 
 .main-content {
   /* margin: 60px; */
