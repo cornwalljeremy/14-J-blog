@@ -29,11 +29,13 @@
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
-        <textarea name="comment-body"></textarea>
+        {{!-- <textarea name="comment-body"></textarea> --}}
+        <textarea class="comment-body col-12"></textarea>
     </div>
 
     <div>
-        <button type="submit">add comment</button>
+        
+        <button type="submit" class="btn btn-success rounded-0" id="add-comment">Add Comment</button>
 
     </div>
 </form>
