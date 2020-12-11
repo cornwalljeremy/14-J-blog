@@ -2,7 +2,7 @@ async function newFormHandler(event) {
     event.preventDefault();
   
     const title = document.querySelector('input[name="post-title"]').value;
-    const blog_content = document.querySelector('textarea[name="blog_content"]').value;
+    const blog_content = document.querySelector('textarea[name="blog-edit"]').value;
   
     const response = await fetch(`/api/posts`, {
       method: 'POST',
