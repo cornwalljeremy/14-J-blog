@@ -13,16 +13,19 @@
 
                 </div>
                 <div class="blog-edit-form">
-                    <input name="blog-edit" class="form-control col border border-success rounded-0" 
-                        value="{{post.blog_content}}" />
+                    <textarea name="blog-edit"
+                        class="form-control col border border-success rounded-0">{{post.blog_content}}</textarea>
 
                 </div>
+                {{!-- <div>
+                    {{post.blog_content}}
+                </div> --}}
 
 
 
 
 
-                <button type="submit" class="btn btn-success rounded-0" id="post-save">Save</button>
+                <button type="submit" class="btn btn-success rounded-0" id="post-save">Update</button>
                 {{!-- <button type="button" class="delete-post-btn">Delete post</button> --}}
                 <button type="submit" class="btn btn-success rounded-0 delete-post-btn" id="post-title">Delete
                     Post</button>
@@ -51,5 +54,5 @@
 {{/if}}
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-{{!-- <script src="/javascript/comment.js"></script> --}}
+
 <script src="/javascript/script.js"></script>

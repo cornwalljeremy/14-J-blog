@@ -70,10 +70,13 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
+  
   Post.update(
-    {
-      title: req.body.title,
-    },
+    req.body, 
+    // {
+    //   title: req.body.title,
+    //   blog_content: req.body.blog_content,
+    // },
     {
       where: {
         id: req.params.id,
@@ -81,6 +84,7 @@ router.put("/:id", (req, res) => {
     }
   )
     .then((dbPostData) => {
+      console.log(dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: "No post found with this is" });
         return;
