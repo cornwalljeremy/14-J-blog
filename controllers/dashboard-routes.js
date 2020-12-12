@@ -4,6 +4,7 @@ const withAuth = require('../utils/auth');
 const { Post, User, Comment } = require('../models/Index');
 
 router.get('/', withAuth, (req, res) => {
+    console.log("get all posts from dashboard")
     Post.findAll({
         where: {
             // use the ID from the session
@@ -44,6 +45,7 @@ router.get('/', withAuth, (req, res) => {
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
+    console.log("get a post from dashboard")
     Post.findOne({
         where: {
             id: req.params.id

@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models/Index");
 
 router.get("/", (req, res) => {
+  console.log("get all posts from home")
   console.log(req.session);
   Post.findAll({
     attributes: [
@@ -50,6 +51,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/post/:id", (req, res) => {
+  console.log("get single post from home route")
   Post.findOne({
     where: {
       id: req.params.id,

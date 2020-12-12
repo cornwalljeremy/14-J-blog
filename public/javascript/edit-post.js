@@ -1,4 +1,5 @@
 async function editFormHandler(event) {
+    console.log("clientside edit post")
   event.preventDefault();
 
   const title = document.querySelector('input[name="post-title"]').value;
@@ -7,12 +8,12 @@ async function editFormHandler(event) {
   ];
   const blogContent = document.querySelector('textarea[name="blog-edit"]')
     .value;
-
+    console.log(blogContent);
   const response = await fetch(`/api/posts/${id}`, {
     method: "PUT",
     body: JSON.stringify({
       title,
-    //   blogContent,
+      blogContent,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +21,8 @@ async function editFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/dashboard");
+    console.log("hello from edit post")
+    // document.location.replace("/dashboard");
   } else {
     alert(response.statusText);
   }
