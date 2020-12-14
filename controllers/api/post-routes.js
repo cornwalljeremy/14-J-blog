@@ -5,7 +5,7 @@ const withAuth = require("../../utils/auth");
 
 // get all posts
 router.get("/", (req, res) => {
-  console.log("get All Posts");
+  // console.log("get All Posts");
   Post.findAll({
     attributes: ["id", "blog_content", "title", "created_at"],
     order: [["created_at", "DESC"]],
@@ -32,7 +32,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  console.log("get individual post");
+  // console.log("get individual post");
   Post.findOne({
     where: {
       id: req.params.id,
@@ -85,7 +85,7 @@ router.put("/:id", (req, res) => {
     }
   )
     .then((dbPostData) => {
-      console.log(dbPostData);
+      // console.log(dbPostData);
       if (!dbPostData) {
         res.status(404).json({ message: "No post found with this is" });
         return;
@@ -98,7 +98,7 @@ router.put("/:id", (req, res) => {
     });
 });
 router.delete("/:id", withAuth, (req, res) => {
-  console.log("where we delete");
+  // console.log("where we delete");
   Post.destroy({
     where: {
       id: req.params.id,

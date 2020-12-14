@@ -1,4 +1,4 @@
-<article class="post">
+ <article class="post">
     <div class="title">
         <div class="card border border-success rounded-0" style="width: 50rem;">
             <div class="card-body">
@@ -9,8 +9,8 @@
                     {{user.username}} on {{format_date created_at}}
                     |
                     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-                    {{!-- <a href="/dashboard/edit/{{ id }}" class="edit-link">  Edit post</a>
-                </div> --}}
+                    <a href="/dashboard/edit/{{ id }}" class="edit-link">  Edit post</a>
+                </div>
                 
             </div>
         </div>
