@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
-const { Post, User, Comment } = require('../models/Index');
+const { Post, User, Comment } = require('../models/index');
 
 router.get('/', withAuth, (req, res) => {
     console.log("get all posts from dashboard")
