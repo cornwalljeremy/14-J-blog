@@ -20,6 +20,8 @@
   "homepage": "https://github.com/cornwalljeremy/14-J-blog#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "config-json": "^1.0.0",
+    "config.json": "0.0.4",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "espress": "0.0.0",
